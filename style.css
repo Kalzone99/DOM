@@ -7,3 +7,7 @@ EXERCICE 3
   background-color: cyan;
 }
 */
+
+.hidden {
+  display: none;
+}

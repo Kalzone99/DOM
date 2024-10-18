@@ -123,4 +123,67 @@ createImg = () => {
 };
 console.log("finally!!");
 createImg();
+--------------------------------------------------------------------------------------------------
 */
+// 08. EXERCISE 1
+//------------------------------------------------------------------------
+/*
+
+const button_1 = document.querySelector("button");
+const button_2 = button_1.nextElementSibling;
+console.log(button_1);
+console.log(button_2);
+const hello = () => {
+  alert("Oh my God ! You again !!!");
+};
+const goodbye = () => {
+  alert("Thank God ! I thought you'd' never leave !");
+};
+button_1.addEventListener("click", hello);
+button_2.addEventListener("click", goodbye);*/
+
+//--------------------------------------------------------------------------
+// 08. EXERCISE 2
+//--------------------------------------------------------------------------
+/*const paragraphs = document.querySelectorAll("p");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    paragraphs[index].classList.toggle("hidden");
+    if (paragraphs[index].classList.contains("hidden")) {
+      button.textContent = "Open Tab";
+    } else {
+      button.textContent = "Close Tab";
+    }
+  });
+});*/
+//---------------------------------------------------------------------------
+// 08. EXERCISE 3
+//---------------------------------------------------------------------------
+
+/*const randomRGB = () =>
+  console.log(
+    `rgb(${Math.floor(Math.random() * 255) + 1}, ${
+      Math.floor(Math.random() * 255) + 1
+    }, ${Math.floor(Math.random() * 255) + 1})`
+  );
+
+randomRGB();*/
+const button = document.querySelector("button");
+const text = document.querySelector("h1");
+
+button.addEventListener("click", () => {
+  const randomRGB = () =>
+    `(${Math.floor(Math.random() * 255) + 1}, ${
+      Math.floor(Math.random() * 255) + 1
+    }, ${Math.floor(Math.random() * 255) + 1})`;
+
+  const rgbColor = `rgb${randomRGB()}`;
+
+  document.querySelector("body").style.background = rgbColor;
+
+  console.log(rgbColor);
+
+  text.textContent = rgbColor;
+});
